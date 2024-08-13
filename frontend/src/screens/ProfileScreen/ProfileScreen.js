@@ -7,7 +7,6 @@ import { updateProfile } from "../../actions/userActions";
 import Loading from "../../components/Loading";
 import ErrorMessage from "../../components/ErrorMessage";
 import { useNavigate } from "react-router-dom";
-import DeleteIcon from '@mui/icons-material/Delete';
 import IconButton from '@mui/material/IconButton';
 import Tooltip from '@mui/material/Tooltip';
 import axios from 'axios'
@@ -158,7 +157,7 @@ const ProfileScreen = ({ location, history }) => {
                   removeImage(pic);
             }}>
               <IconButton>
-                  <DeleteIcon style={{fill:"red"}} fontSize="large"/>
+                  Delete Image
               </IconButton>
             </Tooltip>
           </Col>
