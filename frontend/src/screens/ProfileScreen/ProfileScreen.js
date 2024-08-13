@@ -73,7 +73,7 @@ const ProfileScreen = ({ location, history }) => {
   };
 
   const removeImage =  (url)=>{
-    axios.post("http://localhost:5000/api/users/deleteImageurl",{url}).then((res)=>{
+    axios.post("https://notesbin.onrender.com/api/users/deleteImageurl",{url}).then((res)=>{
         dispatch(updateProfile({ name, email, password, pic:"https://icon-library.com/images/anonymous-avatar-icon/anonymous-avatar-icon-25.jpg" }))
     }).catch((err)=>{
       console.log(err.message);

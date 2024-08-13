@@ -33,7 +33,7 @@ function SingleNote({ match, history }) {
   console.log(match)
   useEffect(() => {
     const fetching = async () => {
-      const { data } = await axios.get(`http://localhost:5000/api/notes/${id}`);
+      const { data } = await axios.get(`https://notesbin.onrender.com/api/notes/${id}`);
 
       setTitle(data.title);
       setContent(data.content);

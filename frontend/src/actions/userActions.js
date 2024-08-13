@@ -13,7 +13,7 @@ import {
 import axios from "axios";
 
 // Base URL for the API
-const API_BASE_URL = process.env.REACT_APP_API_BASE_URL || "http://localhost:5000";
+const API_BASE_URL = process.env.REACT_APP_API_BASE_URL || "https://notesbin.onrender.com";
 
 // Login action
 export const login = (email, password) => async (dispatch) => {
