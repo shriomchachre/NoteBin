@@ -29,5 +29,3 @@ Check out the live version at [NotesBin](https://notes-bin-c7bh.vercel.app).
 
 Open `http://localhost:3000` to use the application. Register or log in to start managing your notes.
 
-
-Feel free to adjust the details as needed!
