@@ -1,0 +1,35 @@
+/* MyNotes.css */
+
+/* Style the custom modal */
+.custom-modal .modal-dialog {
+    max-width: 800px;
+  }
+  
+  .custom-modal .modal-content {
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Style the modal header */
+  .custom-modal .modal-header {
+    background-color: #f8f9fa;
+    border-bottom: 1px solid #dee2e6;
+  }
+  
+  /* Style the close button */
+  .custom-modal .close {
+    font-size: 1.5rem;
+    color: #000;
+  }
+  
+  /* Style the modal title */
+  .custom-modal .modal-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  
+  /* Style the modal body */
+  .custom-modal .modal-body {
+    padding: 2rem;
+  }
+  
