@@ -7,7 +7,10 @@ import { updateProfile } from "../../actions/userActions";
 import Loading from "../../components/Loading";
 import ErrorMessage from "../../components/ErrorMessage";
 import { useNavigate } from "react-router-dom";
-
+import DeleteIcon from '@mui/icons-material/Delete';
+import IconButton from '@mui/material/IconButton';
+import Tooltip from '@mui/material/Tooltip';
+import axios from 'axios'
 const ProfileScreen = ({ location, history }) => {
   const navigate = useNavigate()
   const [name, setName] = useState("");
@@ -68,6 +71,14 @@ const ProfileScreen = ({ location, history }) => {
     }
     dispatch(updateProfile({ name, email, password, pic }));
   };
+
+  const removeImage =  (url)=>{
+    axios.post("http://localhost:5000/api/users/deleteImageurl",{url}).then((res)=>{
+        dispatch(updateProfile({ name, email, password, pic:"https://icon-library.com/images/anonymous-avatar-icon/anonymous-avatar-icon-25.jpg" }))
+    }).catch((err)=>{
+      console.log(err.message);
+    })
+  }
 
   return (
     <MainScreen title="EDIT PROFILE">
@@ -143,6 +154,13 @@ const ProfileScreen = ({ location, history }) => {
             }}
           >
             <img src={pic} alt={name} className="profilePic" />
+            <Tooltip title="Delete" onClick={()=>{
+                  removeImage(pic);
+            }}>
+              <IconButton>
+                  <DeleteIcon style={{fill:"red"}} fontSize="large"/>
+              </IconButton>
+            </Tooltip>
           </Col>
         </Row>
       </div>

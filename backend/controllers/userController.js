@@ -92,4 +92,28 @@ const updateUserProfile = asyncHandler(async (req, res) => {
   }
 });
 
-export { authUser, updateUserProfile, registerUser };
+
+const deleteImage = async (req, res) => {
+  console.log(req.body);
+  try {
+    let { url} = req.body;
+    let newUrl ="https://icon-library.com/images/anonymous-avatar-icon/anonymous-avatar-icon-25.jpg";
+    await User.updateOne(
+      { "pic": url }, // find document with the old URL
+      { $set: { "pic": newUrl } } // update the URL
+    );
+    return res.json({
+      status: "success",
+      message: "URL updated"
+    });
+  } catch (error) {
+    console.error(error);
+    return res.status(500).json({
+      status: "error",
+      message: "An error occurred"
+    });
+  }
+};
+
+
+export { authUser, updateUserProfile, registerUser,deleteImage };
