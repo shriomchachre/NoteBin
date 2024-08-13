@@ -11,7 +11,7 @@ import { errorHandler, notFound } from "./middleware/errorMiddleware.js";
 dotenv.config();
 const app = express(); // main thing
 app.use(cors({
-  origin:["http://localhost:3000"],
+  origin:["https://notes-bin-c7bh.vercel.app"],
   methods:['POST','GET','DELETE','PUT'],
   credentials:true
 }))
