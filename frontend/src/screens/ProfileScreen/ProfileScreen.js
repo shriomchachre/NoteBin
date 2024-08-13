@@ -7,8 +7,6 @@ import { updateProfile } from "../../actions/userActions";
 import Loading from "../../components/Loading";
 import ErrorMessage from "../../components/ErrorMessage";
 import { useNavigate } from "react-router-dom";
-import IconButton from '@mui/material/IconButton';
-import Tooltip from '@mui/material/Tooltip';
 import axios from 'axios'
 const ProfileScreen = ({ location, history }) => {
   const navigate = useNavigate()
@@ -153,13 +151,11 @@ const ProfileScreen = ({ location, history }) => {
             }}
           >
             <img src={pic} alt={name} className="profilePic" />
-            <Tooltip title="Delete" onClick={()=>{
+            <button title="Delete" onClick={()=>{
                   removeImage(pic);
             }}>
-              <IconButton>
                   Delete Image
-              </IconButton>
-            </Tooltip>
+              </button>
           </Col>
         </Row>
       </div>
