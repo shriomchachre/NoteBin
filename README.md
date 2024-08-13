@@ -6,7 +6,7 @@ Sure! Here’s a concise README for your project:
 
 # NotesBin
 
-NotesBin is a MERN stack application for managing notes. It allows users to create, update, delete, and view notes.
+NotesBin is a **MERN** stack application for managing notes. It allows users to create, update, delete, view notes, update profile with profile pic.
 
 ## Deployed Application
 
@@ -35,10 +35,5 @@ Check out the live version at [NotesBin](https://notes-bin-c7bh.vercel.app).
 
 Open `http://localhost:3000` to use the application. Register or log in to start managing your notes.
 
-## License
-
-Licensed under the [MIT License](LICENSE).
-
----
 
 Feel free to adjust the details as needed!
