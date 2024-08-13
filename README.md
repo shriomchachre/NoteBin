@@ -1,9 +1,3 @@
-# NoteBin
-
-Sure! Here’s a concise README for your project:
-
----
-
 # NotesBin
 
 NotesBin is a **MERN** stack application for managing notes. It allows users to create, update, delete, view notes, update profile with profile pic.
