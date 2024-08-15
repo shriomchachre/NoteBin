@@ -30,7 +30,7 @@ function SingleNote({ match, history }) {
     // history.push("/mynotes");
     navigate("/mynotes");
   };
-  console.log(match)
+  // console.log(match)
   useEffect(() => {
     const fetching = async () => {
       const { data } = await axios.get(`https://notesbin.onrender.com/api/notes/${id}`);
@@ -116,7 +116,7 @@ function SingleNote({ match, history }) {
             <Button
               variant="danger"
               className="mx-2"
-              onClick={() => deleteHandler(note._id)}
+              onClick={() => deleteHandler(id)}
             >
               Delete Note
             </Button>
