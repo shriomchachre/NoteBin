@@ -114,9 +114,9 @@ function SingleNote({ match, history }) {
               Update Note
             </Button>
             <Button
-              className="mx-2"
               variant="danger"
-              onClick={() => deleteHandler(match.params.id)}
+              className="mx-2"
+              onClick={() => deleteHandler(note._id)}
             >
               Delete Note
             </Button>
